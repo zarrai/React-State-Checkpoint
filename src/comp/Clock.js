@@ -26,7 +26,8 @@ class Clock extends React.Component {
       render() {
         return (
           <div>
-            <div>{this.state.elapsedTime} seconds</div>
+            {/* <div>{this.state.elapsedTime} seconds</div> */}
+            <h4>{new Date(this.state.elapsedTime * 1000).toISOString().substr(11, 8)}</h4>
           </div>
         );
       }
